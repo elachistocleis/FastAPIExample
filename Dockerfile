@@ -32,7 +32,7 @@ WORKDIR /opt/myfastpayapi
 COPY . .
 EXPOSE 80
 
-ENTRYPOINT ["./start-app.sh"]
+ENTRYPOINT ["gunicorn", "-c", "gunicorn_config.py", "src.main:app"]
 
 
 
