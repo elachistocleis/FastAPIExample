@@ -1,5 +1,6 @@
 # setup base python container
 FROM python:3.9-bullseye as python_base
+FROM python:3.10-bullseye as python_base
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     nano \
