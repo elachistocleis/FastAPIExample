@@ -1,6 +1,4 @@
 # setup base python container
-FROM python:3.9-bullseye as python_base
-FROM python:3.10-bullseye as python_base
 FROM python:3.10-bullseye as python_base  
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
@@ -9,8 +7,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     net-tools
 
 RUN apt-get clean
-RUN python3.9 -m pip install pipenv
-RUN python3.10.8 -m pip install pipenv
 RUN python3.10 -m pip install pipenv
 
 
